@@ -30,9 +30,9 @@ body {
 /* center aligned to the body */
 /* the same background colour as the <body> element */
 main {
-background-color: #f4f1ec;
-display: flex;
-flex-direction: column;
-padding-left: 5%;
-padding-right: 5%;
+  background-color: #f4f1ec;
+  display: flex;
+  flex-direction: column;
+  padding-left: 5%;
+  padding-right: 5%;
 }
