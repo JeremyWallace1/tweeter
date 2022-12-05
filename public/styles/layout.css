@@ -17,9 +17,22 @@ html {
 body {
   color: #545149;
   background-color: #f4f1ec;
+  /* if source-sans-pro is unavailable then sans-serif instead */
+  font-family: 'source-sans-pro', sans-serif; 
   font-size: 24px;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+/* 90% of the width of its parent element */
+/* center aligned to the body */
+/* the same background colour as the <body> element */
+main {
+background-color: #f4f1ec;
+display: flex;
+flex-direction: column;
+padding-left: 5%;
+padding-right: 5%;
+}

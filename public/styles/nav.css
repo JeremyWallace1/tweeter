@@ -1,0 +1,41 @@
+/* CSS for Navigation bar */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display:flex;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  justify-content: space-between;
+  align-content: flex-end;
+  height: 120px;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  padding-bottom: 0.5em;
+
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-size: 48px;
+  font-family: 'bungee', sans-serif;
+}
+
+.rightNav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* .writeTweet {
+  
+} */
+
+.clickWriteTweet {
+  display: flex;
+  justify-content: center;
+  color: red;
+  padding-top: 0.2em
+}
