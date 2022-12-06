@@ -5,29 +5,44 @@
   border-color: black;
   justify-content: space-between;
   flex-direction: column;
+  color: rgb(90, 87, 77);
 
 }
 
 form {
   display: flex;
   flex-direction: column;
-  /* align-content: space-around; */
-  color: rgb(75, 75, 75);
+  align-content: space-around;
 }
 
-.tweet-text {
-  border-bottom: 5px;
-  border-color:rgb(75, 75, 75);
+textarea {
+  border-bottom: 5px solid rgb(90, 87, 77);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  resize: none;
+  background-color:#f4f1ec;
+  outline: 0;
+  color: black;
+  font-size: 20px;
 }
 
-button {
+form div {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.5em
+}
+
+form button {
   background-color: #4056A1;
   color: #FFFFFF;
   font-family: 'bungee', sans-serif;
   border: none;
+  padding: 3px 10px 3px 10px;
 }
 
 .counter {
   font-family: 'bungee', sans-serif;
-  align-self: flex-end;
+  padding: 3px 10px 3px 10px;
+
 }
