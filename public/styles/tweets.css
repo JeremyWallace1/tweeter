@@ -1,0 +1,68 @@
+article.tweet {
+  display: flex;
+  flex-direction: column;
+  outline: 5px rgb(90, 87, 77) solid;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  justify-content: space-between
+}
+
+article.tweet header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 1em;
+  padding-right: 1em;
+  flex-basis: 100px;
+  color: black;
+
+}
+
+
+article.tweet div.tweeter {
+  display: flex;
+  width: 98%;
+  justify-content: space-between;
+}
+
+article.tweet div.tweetContents {
+  display: flex;
+  width: 98%;
+  justify-content: flex-start;
+  align-items: stretch;
+
+}
+
+article.tweet footer {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 30px;
+  justify-content: space-between;
+  margin: 1em;
+  padding-top: 1em;
+  border-top: 5px solid rgb(90, 87, 77);
+
+}
+
+article.tweet div.date {
+  padding-left: 1em;
+  font-size: 20px;
+  flex-basis: 250px;
+}
+
+article.tweet div.actions {
+  display: flex;
+  justify-content: space-around;
+  padding-right: 1em;
+  font-size: 20px;
+  color: darkblue;
+  flex-basis: 100px;
+}
+
+.boxshadow {
+  box-shadow: 10px 10px rgb(90, 87, 77, 0.25);
+}
+
+.yellowify {
+  color: darkgoldenrod;
+}
