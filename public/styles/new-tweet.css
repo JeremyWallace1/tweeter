@@ -1,5 +1,3 @@
-/* centered, bottom border, styled button, right-aligned counter */
-
 .new-tweet {
   display: flex;
   border-color: black;

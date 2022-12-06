@@ -18,12 +18,9 @@ $(document).ready(function() { // $ define/access jQuery, (document) is the sele
     // console.log('the text has been changed after losing focus');
   // });
   $("textarea").on('input', function() { // like .change but registers immediately, not when losing focus.
-      // console.log(this);
       let textLength = $(this).val().length;
-      // console.log(textLength);
       let counterValue = $(this).closest("output").val()
       counterValue = 140 - textLength;
-      // console.log(counterValue);
       $("output").text(counterValue);
       if (counterValue < 0) {
         $("output").addClass("reddify");

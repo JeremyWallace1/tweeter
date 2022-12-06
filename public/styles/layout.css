@@ -20,6 +20,9 @@ body {
   /* if source-sans-pro is unavailable then sans-serif instead */
   font-family: 'source-sans-pro', sans-serif; 
   font-size: 24px;
+  background-color: #b38330;
+  background-image: url('../images/asfalt-dark.png');
+
 }
 
 /*
