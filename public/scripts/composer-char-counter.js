@@ -18,12 +18,15 @@ $(document).ready(function() { // $ define/access jQuery, (document) is the slec
     // console.log('the text has been changed after losing focus');
   // });
   $("textarea").on('input', function() { // like .change but registers immediately, not when losing focus.
-      console.log(this);
+      // console.log(this);
       let textLength = $(this).val().length;
-      console.log(textLength);
-      let counterValue = $(this).closest("counter").val()
+      // console.log(textLength);
+      let counterValue = $(this).closest("output").val()
       counterValue = 140 - textLength;
-      console.log(counterValue);
+      // console.log(counterValue);
       $("output").text(counterValue);
+      if (counterValue < 0) {
+        document.getElementsByClassName("output").style.color = "red";
+      }
   });
 });
