@@ -1,5 +1,5 @@
 // all jQuery methods should be inside a document ready event to prevent any jQuery code from running before the document is finished loading. This allows us to have it in the head section of the coument.
-$(document).ready(function() { // $ define/access jQuery, (document) is the slector to find html elements, .ready() the action to be performed on the elements
+$(document).ready(function() { // $ define/access jQuery, (document) is the selector to find html elements, .ready() the action to be performed on the elements
   console.log('The DOM is ready for manipulation!');
   // register an event handler to the textarea element for the form inside of the .new-tweet section.
   // $("textarea").blur(function() {
@@ -26,7 +26,9 @@ $(document).ready(function() { // $ define/access jQuery, (document) is the slec
       // console.log(counterValue);
       $("output").text(counterValue);
       if (counterValue < 0) {
-        document.getElementsByClassName("output").style.color = "red";
+        $("output").addClass("reddify");
+      } else {
+        $("output").removeClass("reddify");
       }
   });
 });

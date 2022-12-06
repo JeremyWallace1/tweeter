@@ -45,3 +45,7 @@ form button {
   font-family: 'bungee', sans-serif;
   padding: 3px 10px 3px 10px;
 }
+
+.reddify {
+  color: red;
+}
