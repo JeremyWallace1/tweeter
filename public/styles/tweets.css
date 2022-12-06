@@ -23,23 +23,38 @@ article.tweet div.tweeter {
   display: flex;
   width: 98%;
   justify-content: space-between;
+  padding-top: 1em;
+}
+
+article.tweet div.tweeterImageName {
+  display: flex;
+  align-items: center;
+}
+
+article.tweet div.tweeterImageName img {
+  padding-right: 1em;
+}
+article.tweet div.tweeterHandle {
+  display: flex;
+  align-items: center;
+  color: lightgray;
 }
 
 article.tweet div.tweetContents {
   display: flex;
-  width: 98%;
+  width: 95%;
+  padding-top: 1em;
+  padding-bottom: 1em;
   justify-content: flex-start;
-  align-items: stretch;
 
 }
 
 article.tweet footer {
   display: flex;
   flex-direction: row;
-  flex-basis: 30px;
   justify-content: space-between;
-  margin: 1em;
-  padding-top: 1em;
+  margin: 0.5em;
+  padding-top: 0.5em;
   border-top: 5px solid rgb(90, 87, 77);
 
 }
