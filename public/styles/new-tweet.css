@@ -1,0 +1,33 @@
+/* centered, bottom border, styled button, right-aligned counter */
+
+.new-tweet {
+  display: flex;
+  border-color: black;
+  justify-content: space-between;
+  flex-direction: column;
+
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  /* align-content: space-around; */
+  color: rgb(75, 75, 75);
+}
+
+.tweet-text {
+  border-bottom: 5px;
+  border-color:rgb(75, 75, 75);
+}
+
+button {
+  background-color: #4056A1;
+  color: #FFFFFF;
+  font-family: 'bungee', sans-serif;
+  border: none;
+}
+
+.counter {
+  font-family: 'bungee', sans-serif;
+  align-self: flex-end;
+}
