@@ -1,4 +1,4 @@
-article.tweet {
+.tweet {
   display: flex;
   flex-direction: column;
   outline: 5px rgb(90, 87, 77) solid;
@@ -7,7 +7,8 @@ article.tweet {
   justify-content: space-between
 }
 
-article.tweet header {
+/* HEADER for article.tweet */
+.tweet header {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -15,41 +16,45 @@ article.tweet header {
   padding-right: 1em;
   flex-basis: 100px;
   color: black;
+  color: rgb(90, 87, 77);
 
 }
 
-
-article.tweet div.tweeter {
+.tweeter {
   display: flex;
   width: 98%;
   justify-content: space-between;
   padding-top: 1em;
+  
 }
 
-article.tweet div.tweeterImageName {
+.tweeterImageName {
   display: flex;
   align-items: center;
 }
 
-article.tweet div.tweeterImageName img {
+.userImage {
   padding-right: 1em;
 }
-article.tweet div.tweeterHandle {
+
+.tweeterHandle {
   display: flex;
   align-items: center;
-  color: lightgray;
+  color: rgb(64, 86, 161, 0.33);
 }
 
-article.tweet div.tweetContents {
+.tweetContents {
   display: flex;
   width: 95%;
   padding-top: 1em;
   padding-bottom: 1em;
   justify-content: flex-start;
+  font-weight: 600;
 
 }
 
-article.tweet footer {
+/* FOOTER for article.tweet */
+.tweet footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -59,18 +64,18 @@ article.tweet footer {
 
 }
 
-article.tweet div.date {
+.date {
   padding-left: 1em;
   font-size: 20px;
   flex-basis: 250px;
 }
 
-article.tweet div.actions {
+.actions {
   display: flex;
   justify-content: space-around;
   padding-right: 1em;
   font-size: 20px;
-  color: darkblue;
+  color: rgb(64, 86, 161);
   flex-basis: 100px;
 }
 

@@ -4,7 +4,7 @@ nav {
   top: 0;
   width: 100%;
   display:flex;
-  background-color: #4056A1;
+  background-color: rgb(64, 86, 161);
   color: #FFFFFF;
   justify-content: space-between;
   align-content: flex-end;
@@ -28,10 +28,6 @@ nav {
   flex-direction: column;
   justify-content: flex-end;
 }
-
-/* .writeTweet {
-  
-} */
 
 .clickWriteTweet {
   display: flex;
