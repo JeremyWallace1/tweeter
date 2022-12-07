@@ -67,7 +67,7 @@
 .date {
   padding-left: 1em;
   font-size: 20px;
-  flex-basis: 400px;
+  flex-basis: 90%;
 }
 
 .actions {
@@ -76,7 +76,7 @@
   padding-right: 1em;
   font-size: 20px;
   color: rgb(64, 86, 161);
-  flex-basis: 100px;
+  flex-basis: 10%;
 }
 
 .boxshadow {
