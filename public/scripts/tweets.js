@@ -1,19 +1,21 @@
 $(document).ready(function() { // $ define/access jQuery, (document) is the selector to find html elements, .ready() the action to be performed on the elements
-  $("article.aTweet").hover(function() { 
+  $(".aTweet").hover(function() { 
+    console.log("hovering over the box containing the tweet");
     $(this).toggleClass('boxshadow');
+
   });
 
-  $("article.aTweet footer div.flag").hover(function() {
+  $(".flag").hover(function() {
     $(this).toggleClass('yellowify');
     console.log('hovered over flag');
   });
 
-  $("article.aTweet footer div.retweet").hover(function() {
+  $(".retweet").hover(function() {
     $(this).toggleClass('yellowify');
     console.log('hovered over retweet');
   });
 
-  $("article.aTweet footer div.like").hover(function() {
+  $(".like").hover(function() {
     $(this).toggleClass('yellowify');
     console.log('hovered over like');
   });

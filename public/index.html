@@ -43,7 +43,7 @@
 
     <!-- Timeago.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
+
   </head>
 
   <body>
@@ -87,6 +87,44 @@
         </form>
       </section>
       <!-- container for all the tweets -->
+      <section class="temporary">
+        <article class="aTweet">
+          <header>
+            <div class="tweeter">
+              <div class="tweeterImageName">
+                <div class="userImage">
+                  <img src=${tweet.user.avatars}>
+                </div>
+                <div class="name">
+                  ${tweet.user.name}
+                </div>
+              </div>
+              <div class="tweeterHandle">
+                ${tweet.user.handle}
+              </div>
+            </div>
+            <div class="tweetContents">
+              ${tweet.content.text}
+            </div>
+          </header>
+          <footer>
+            <div class="date">
+              ${postDate}
+            </div>
+            <div class="actions">
+              <div class="flag">
+                <i class="fa-solid fa-flag"></i>
+              </div>
+              <div class="retweet">
+                <i class="fa-solid fa-retweet"></i>
+              </div>
+              <div class="like">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+            </div>
+          </footer>
+        </article>
+      </section>
       <section class="old-tweets">
       <!-- Old tweets now dynamically generated here from client.js -->
       </section>
