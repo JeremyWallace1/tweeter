@@ -42,7 +42,7 @@ $(document).ready(function() { // $ define/access jQuery, (document) is the sele
 
   const createTweetElement = function(tweet) {
     const postDate = new Date(tweet.created_at);
-    const markup = `<article class = "aTweet">
+    const $tweet = `<article class = "aTweet">
         <header>
           <div class = "tweeter">
             <div class = "tweeterImageName">
@@ -79,7 +79,7 @@ $(document).ready(function() { // $ define/access jQuery, (document) is the sele
         </footer>
       </article>
     `;
-    return markup;
+    return $tweet;
   };
 
   renderTweets(data);
