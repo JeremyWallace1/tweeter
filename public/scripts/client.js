@@ -86,4 +86,13 @@ $(document).ready(function() { // $ define/access jQuery, (document) is the sele
   // Test / driver code (temporary)
   // $('.container').append('<article class="tweet">'+$tweet+'</article>'); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
 
+  $( "form" ).submit(function( event ) {
+    // Serialize the form data
+    console.log(event.text);
+    //const serializedData = (this).serialize()
+    // Use the jQuery library to submit a POST request that sends the serialized data to the server
+    //alert( serializedData );
+    event.preventDefault();
+  });
+
 });
