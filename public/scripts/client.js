@@ -41,19 +41,20 @@ $(document).ready(function() { // $ define/access jQuery, (document) is the sele
   };
 
   const createTweetElement = function(tweet) {
-    $tweet = "<article class = "aTweet">
+    const postDate = new Date(tweet.created_at);
+    const markup = `<article class = "aTweet">
         <header>
           <div class = "tweeter">
             <div class = "tweeterImageName">
               <div class = "userImage">
-                <img src = "${tweet.avatars}">
+                <img src = ${tweet.user.avatars}>
               </div>
               <div class = "name">
-                ${tweet.name}
+                ${tweet.user.name}
               </div>
             </div>
             <div class = "tweeterHandle">
-              ${tweet.handle}
+              ${tweet.user.handle}
             </div>
           </div>
           <div class = "tweetContents">
@@ -62,7 +63,7 @@ $(document).ready(function() { // $ define/access jQuery, (document) is the sele
         </header>
         <footer>
           <div class = "date">
-            ${tweet.created_at}
+            ${postDate}
           </div>
           <div class = "actions">
             <div class="flag">
@@ -77,8 +78,8 @@ $(document).ready(function() { // $ define/access jQuery, (document) is the sele
           </div>
         </footer>
       </article>
-    ";
-    return $tweet;
+    `;
+    return markup;
   };
 
   renderTweets(data);
