@@ -1,4 +1,4 @@
-.tweet {
+.aTweet {
   display: flex;
   flex-direction: column;
   outline: 5px rgb(90, 87, 77) solid;
@@ -8,7 +8,7 @@
 }
 
 /* HEADER for article.tweet */
-.tweet header {
+.aTweet header {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -54,7 +54,7 @@
 }
 
 /* FOOTER for article.tweet */
-.tweet footer {
+.aTweet footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
