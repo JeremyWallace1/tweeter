@@ -6,7 +6,7 @@
 
 // Test / driver code (temporary). Eventually will get this from the server.
 
-$(document).ready(function() { // $ define/access jQuery, (document) is the selector to find html elements, .ready() the action to be performed on the elements
+$(() => { // $ define/access jQuery, (document) is the selector to find html elements, .ready() the action to be performed on the elements
 
   const data = [
     {
@@ -33,10 +33,15 @@ $(document).ready(function() { // $ define/access jQuery, (document) is the sele
     }
   ]
 
+  const refreshTweets = (data) => {
+    $('.old-tweets').empty();
+    renderTweets(data);
+  };
+  
   const renderTweets = function(tweets) {
     for (let twit of tweets) {
       $tweet = createTweetElement(twit);
-      $('.container').append($tweet);
+      $('.old-tweets').append($tweet);
     }
   };
 
@@ -82,7 +87,7 @@ $(document).ready(function() { // $ define/access jQuery, (document) is the sele
     return $tweet;
   };
 
-  renderTweets(data);
+  refreshTweets(data);
   // Test / driver code (temporary)
   // $('.container').append('<article class="tweet">'+$tweet+'</article>'); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
 
