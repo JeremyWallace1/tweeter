@@ -7,6 +7,10 @@
   justify-content: space-between
 }
 
+.aTweet:hover {
+  box-shadow: 10px 10px rgb(90, 87, 77, 0.25);
+}
+
 /* HEADER for article.tweet */
 .aTweet header {
   display: flex;
@@ -79,10 +83,12 @@
   flex-basis: 100px;
 }
 
-.boxshadow {
-  box-shadow: 10px 10px rgb(90, 87, 77, 0.25);
+.flag:hover {
+  color: darkgoldenrod;
 }
-
-.yellowify {
+.retweet:hover {
+  color: darkgoldenrod;
+}
+.like:hover {
   color: darkgoldenrod;
 }

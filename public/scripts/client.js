@@ -79,7 +79,9 @@ $(() => { // makes sure whole page is loaded first
     
     $.post('/tweets', serializedData);
     // alert( serializedData );
+  
   });
+
 
 
   loadTweets();
