@@ -88,7 +88,7 @@ $(() => { // $ define/access jQuery, (document) is the selector to find html ele
     return $tweet;
   };
 
-  refreshTweets(data);
+  // refreshTweets(data);
   // Test / driver code (temporary)
   // $('.container').append('<article class="tweet">'+$tweet+'</article>'); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
 
@@ -105,13 +105,13 @@ $(() => { // $ define/access jQuery, (document) is the selector to find html ele
     // alert( serializedData );
   });
 
-  const loadTweets = function() => {
+  const loadTweets = function() {
     //responsible for fetching tweets from the http://localhost:8080/tweets page
-    $.ajax('website', { 
-      method: 'GET' 
-    })
-    .then(function(something) {
-      console.log('Success: ', refreshTweets(data));
+    $.get('/tweets', function(response) {
+      console.log(response);
+      refreshTweets(response);
     });
   };
+
+  loadTweets();
 });
