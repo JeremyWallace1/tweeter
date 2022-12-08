@@ -76,7 +76,7 @@ $(() => { // makes sure whole page is loaded first
     $("textarea").val("");
     $("output").val("140");
     $(".emptyError").css("display", "none")
-    $(".tooLongError").css("display", "none")
+    $(".errorSection").css("display", "none")
   }; 
 
   $("form").submit(function( event ) {
@@ -84,14 +84,16 @@ $(() => { // makes sure whole page is loaded first
     const serializedData = $("form").serialize()
     const tweetContent = $('#tweet-text').val().trim();
     if (!tweetContent) {
-      $(".emptyError").css("display", "block")
+      $(".emptyError").text("You can't tweet nothing!");
+      $(".emptyError").css("display", "block");
     } else if (tweetContent.length > 140) {
-      $(".tooLongError").css("display", "block")
+      $(".emptyError").text("You are using too many characters!");
+      $(".emptyError").css("display", "block");
     } else {
       $.post('/tweets', serializedData);
       loadTweets(clearForm);
     }
   });
 
-  loadTweets();
+  loadTweets(clearForm);
 });

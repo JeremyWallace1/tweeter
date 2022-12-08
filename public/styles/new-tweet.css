@@ -26,14 +26,10 @@ textarea {
 }
 .emptyError {
   display: none;
+  justify-content: center;
   background-color: red;
   color: white;
-}
-
-.tooLongError {
-  display: none;
-  background-color: red;
-  color: white;
+  padding: 0;
 }
 
 form div {
