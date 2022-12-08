@@ -1,4 +1,4 @@
-section .new-tweet {
+.new-tweet {
   display: none;
   border-color: black;
   justify-content: space-between;
@@ -25,6 +25,7 @@ textarea {
   color: black;
   font-size: 20px;
 }
+
 .error {
   display: none;
   align-content: space-around;
@@ -57,4 +58,24 @@ form button {
 
 .reddify {
   color: red;
+}
+
+@keyframes example {
+  0%   {top:0px;}
+  50%  {top:10px;}
+  100% {top:0px;}
+}
+
+.clickWriteTweet {
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  background-color: transparent;
+  border: none;
+  width: 2em;
+  align-self:center;
+}
+.clickWriteTweet:hover {
+  color: white;
 }

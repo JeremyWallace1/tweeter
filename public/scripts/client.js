@@ -98,9 +98,10 @@ $(() => { // makes sure whole page is loaded first
 
   loadTweets(clearForm);
 
-  $("fa-solid fa-angles-down").on("click", () => {
+  $("button.clickWriteTweet").on("click", () => {
     console.log("clicked the angles-down item");
-    $("section new-tweet").slideDown();
+    $(".new-tweet").css("display", "flex");
+    $("textarea").focus();
   });
 
 });
