@@ -8,12 +8,15 @@ $(() => { // makes sure whole page is loaded first
   const refreshTweets = (data) => {
     $('.old-tweets').empty();
     renderTweets(data);
+
   };
   
   const renderTweets = function(tweets) {
     for (let twit of tweets) {
       $tweet = createTweetElement(twit);
       $('.old-tweets').append($tweet);
+      $("textarea").val("");
+      $("output").val("140");
     }
   };
 
@@ -24,6 +27,7 @@ $(() => { // makes sure whole page is loaded first
     const escape = function(str) {
       let div = document.createElement("div");
       div.appendChild(document.createTextNode(str));
+      console.log(div.innerHTML);
       return div.innerHTML;
     };
 
@@ -43,9 +47,7 @@ $(() => { // makes sure whole page is loaded first
               ${tweet.user.handle}
             </div>
           </div>
-          
             ${safeHTML}
-          
         </header>
         <footer>
           <div class="date">
@@ -89,8 +91,6 @@ $(() => { // makes sure whole page is loaded first
     } else {
       $.post('/tweets', serializedData);
       loadTweets();
-      $("textarea").val("");
-      $("output").val("140");
     }
   });
 
