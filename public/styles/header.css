@@ -1,14 +1,27 @@
-/* The visible portion of the header should have a height of 400px and be 100% the width of its parent container */
-/* The avatar should be centered vertically and horizontally (Hint: the justify-content and align-items properties are helpful for centering things if you're using Flexbox.) */
-/* The name should be centered below the avatar */
-/* The background-color should be a different colour than the nav and the body */
 header {
   display: flex;
-  height: 520px;
+  height: 400px;
   width: 100%;
   color: #FFFFFF;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
+  text-align: center;
+  font-size: 20px;
+  background-color: none;
+  background-image: none;
+}
 
+@media screen and (min-width: 1024px) {
+  header {
+    height: 100%;
+    width: 29%;
+    padding: 50px;
+    margin: 20px 0 0 40px;
+    background-image: url('../images/asfalt-dark.png');
+    background-color: #b38330;
+    justify-content: flex-start;
+    text-align: center;
+    align-self: flex-start;
+  }
 }

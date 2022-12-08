@@ -25,14 +25,14 @@ $(() => { // makes sure whole page is loaded first
 
   const createTweetElement = function(tweet) {
     const postDate = timeago.format(tweet.created_at);
-    const safeHTML = `<div class="tweetContents">${escape(tweet.content.text)}</div>`;
+    const safeHTML = `<p class="tweetContents">${escape(tweet.content.text)}</p>`;
     const $tweet = `<article class="aTweet">
-        <header>
+        <div>
           <div class="tweeter">
             <div class="tweeterImageName">
-              <div class="userImage">
+              <picture>
                 <img src=${tweet.user.avatars}>
-              </div>
+              </picture>
               <div class="name">
                 ${tweet.user.name}
               </div>
@@ -42,7 +42,7 @@ $(() => { // makes sure whole page is loaded first
             </div>
           </div>
             ${safeHTML}
-        </header>
+        </div>
         <footer>
           <div class="date">
             ${postDate}
@@ -101,7 +101,7 @@ $(() => { // makes sure whole page is loaded first
   $("button.clickWriteTweet").on("click", () => {
     console.log("clicked the angles-down item");
     // $(".new-tweet").css("display", "flex");
-    $(".new-tweet").slideDown();
+    $(".new-tweet").slideToggle();
     $("textarea").focus();
   });
 

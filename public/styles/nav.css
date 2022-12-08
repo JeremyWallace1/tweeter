@@ -1,25 +1,32 @@
 /* CSS for Navigation bar */
 nav {
-  position: fixed;
+  display: none;
+  /* position: fixed; */
   top: 0;
   width: 100%;
-  display:flex;
-  background-color: rgb(64, 86, 161);
+  display: flex;
+  background-color: transparent;
   color: #FFFFFF;
   justify-content: space-between;
   align-content: flex-end;
-  height: 120px;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
+  height: 80px;
+  padding-left: 1em;
+  padding-right: 1em;
   padding-bottom: 0.5em;
 
+}
+
+.writeTweet {
+  font-size: 10px;
+  text-align: center;
+  padding-left: 1em;
 }
 
 .logo {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  font-size: 48px;
+  font-size: 36px;
   font-family: 'bungee', sans-serif;
 }
 
@@ -33,5 +40,40 @@ nav {
   display: flex;
   justify-content: center;
   color: red;
-  padding-top: 0.2em
+  padding-top: 0.2em;
+  padding-left: 1em;
+}
+
+@media screen and (min-width: 330px) {
+  .writeTweet {
+    font-size: 16px;
+  }
+  .clickWriteTweet {
+    padding-left: 1.5em;
+  }
+  
+}
+
+@media screen and (min-width: 768px) {
+  .writeTweet {
+    font-size: 18px;
+  }
+  .clickWriteTweet {
+    padding-left: 2em;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+  nav {
+    background-color: rgb(64, 86, 161);
+    width: 100%;
+  }
+  .writeTweet {
+    font-size: 20px;
+  }
+  .clickWriteTweet {
+    padding-left: 2.5em;
+  }
+  
 }

@@ -15,6 +15,7 @@ form {
 }
 
 textarea {
+  height: 2em;
   border-bottom: 5px solid rgb(90, 87, 77);
   border-top: none;
   border-left: none;
@@ -62,19 +63,20 @@ form button {
 
 @keyframes example {
   0%   {top:0px;}
-  50%  {top:10px;}
+  50%  {top:5px;}
   100% {top:0px;}
 }
 
 .clickWriteTweet {
   position: relative;
   animation-name: example;
-  animation-duration: 4s;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
   background-color: transparent;
   border: none;
   width: 2em;
   align-self:center;
+  font-size: 16px;
 }
 .clickWriteTweet:hover {
   color: white;
