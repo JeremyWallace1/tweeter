@@ -76,6 +76,12 @@
         <h2>Compose Tweet</h2>
         <form action="/tweets" method="POST">
           <label for="tweet-text">What are you humming about?</label>
+          <div class="emptyError">
+            empty string!
+          </div>
+          <div class="tooLongError">
+            too many characters!
+          </div>
           <textarea name="text" id="tweet-text"></textarea>
           <div>
             <button type="submit">Tweet</button>
@@ -86,7 +92,7 @@
       <!-- container for all the tweets -->
       <section class="old-tweets">
       <!-- Old tweets now dynamically generated here from client.js -->
-      
+
       </section>
     </main>
   </body>

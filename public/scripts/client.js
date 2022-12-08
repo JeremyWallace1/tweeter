@@ -8,29 +8,23 @@ $(() => { // makes sure whole page is loaded first
   const refreshTweets = (data) => {
     $('.old-tweets').empty();
     renderTweets(data);
-
   };
   
   const renderTweets = function(tweets) {
     for (let twit of tweets) {
       $tweet = createTweetElement(twit);
       $('.old-tweets').append($tweet);
-      $("textarea").val("");
-      $("output").val("140");
     }
   };
 
-  
+  const escape = function(str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   const createTweetElement = function(tweet) {
     const postDate = timeago.format(tweet.created_at);
-
-    const escape = function(str) {
-      let div = document.createElement("div");
-      div.appendChild(document.createTextNode(str));
-      console.log(div.innerHTML);
-      return div.innerHTML;
-    };
-
     const safeHTML = `<div class="tweetContents">${escape(tweet.content.text)}</div>`;
     const $tweet = `<article class="aTweet">
         <header>
@@ -70,31 +64,34 @@ $(() => { // makes sure whole page is loaded first
     return $tweet;
   };
 
-  const loadTweets = function() {
+  const loadTweets = function(callback) {
     //responsible for fetching tweets from the http://localhost:8080/tweets page
     $.get('/tweets', function(response) {
-      console.log(response);
       refreshTweets(response);
+      callback();
     });
   };
 
+  const clearForm = function() {
+    $("textarea").val("");
+    $("output").val("140");
+    $(".emptyError").css("display", "none")
+    $(".tooLongError").css("display", "none")
+  }; 
 
   $("form").submit(function( event ) {
     event.preventDefault();
     const serializedData = $("form").serialize()
     const tweetContent = $('#tweet-text').val().trim();
-    console.log(tweetContent);
     if (!tweetContent) {
-      alert("empty string!");
+      $(".emptyError").css("display", "block")
     } else if (tweetContent.length > 140) {
-      alert("too much!");
+      $(".tooLongError").css("display", "block")
     } else {
       $.post('/tweets', serializedData);
-      loadTweets();
+      loadTweets(clearForm);
     }
   });
-
-
 
   loadTweets();
 });
