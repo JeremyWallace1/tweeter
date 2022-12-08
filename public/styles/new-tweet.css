@@ -1,16 +1,17 @@
-.new-tweet {
-  display: flex;
+section .new-tweet {
+  display: none;
   border-color: black;
   justify-content: space-between;
   flex-direction: column;
   color: rgb(90, 87, 77);
-
 }
+
 
 form {
   display: flex;
   flex-direction: column;
   align-content: space-around;
+  padding-top: 1em;
 }
 
 textarea {
@@ -24,12 +25,15 @@ textarea {
   color: black;
   font-size: 20px;
 }
-.emptyError {
+.error {
   display: none;
-  justify-content: center;
-  background-color: red;
+  align-content: space-around;
+  text-align: center;
+  align-self: center;
   color: white;
-  padding: 0;
+  background-color: red;
+  padding: 5px;
+  width: 90%;
 }
 
 form div {

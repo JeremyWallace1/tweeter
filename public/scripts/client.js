@@ -75,20 +75,21 @@ $(() => { // makes sure whole page is loaded first
   const clearForm = function() {
     $("textarea").val("");
     $("output").val("140");
-    $(".emptyError").css("display", "none")
-    $(".errorSection").css("display", "none")
+    $(".error").css("display", "none")
   }; 
+
+
 
   $("form").submit(function( event ) {
     event.preventDefault();
     const serializedData = $("form").serialize()
     const tweetContent = $('#tweet-text').val().trim();
     if (!tweetContent) {
-      $(".emptyError").text("You can't tweet nothing!");
-      $(".emptyError").css("display", "block");
+      $(".error-message").text("You can't tweet nothing!");
+      $(".error").slideDown();
     } else if (tweetContent.length > 140) {
-      $(".emptyError").text("You are using too many characters!");
-      $(".emptyError").css("display", "block");
+      $(".error-message").text(`You are using too many characters! Keep it under 140, k?`);
+      $(".error").slideDown("display", "flex");
     } else {
       $.post('/tweets', serializedData);
       loadTweets(clearForm);
@@ -96,4 +97,10 @@ $(() => { // makes sure whole page is loaded first
   });
 
   loadTweets(clearForm);
+
+  $("fa-solid fa-angles-down").on("click", () => {
+    console.log("clicked the angles-down item");
+    $("section new-tweet").slideDown();
+  });
+
 });
