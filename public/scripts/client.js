@@ -1,10 +1,8 @@
 /*
  * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-$(() => { // makes sure whole page is loaded first
+$(() => {
   const refreshTweets = (data) => {
     $('.old-tweets').empty();
     renderTweets(data);
@@ -75,14 +73,12 @@ $(() => { // makes sure whole page is loaded first
   const clearForm = function() {
     $("textarea").val("");
     $("output").val("140");
-    $(".error").css("display", "none")
-  }; 
+    $(".error").css("display", "none");
+  };
 
-
-
-  $("form").submit(function( event ) {
+  $("form").submit(function(event) {
     event.preventDefault();
-    const serializedData = $("form").serialize()
+    const serializedData = $("form").serialize();
     const tweetContent = $('#tweet-text').val().trim();
     if (!tweetContent) {
       $(".error-message").text("You can't tweet nothing!");

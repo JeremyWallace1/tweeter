@@ -13,15 +13,9 @@ nav {
   padding-left: 1em;
   padding-right: 1em;
   padding-bottom: 0.5em;
-
 }
 
-.writeTweet {
-  font-size: 10px;
-  text-align: center;
-  padding-left: 1em;
-}
-
+/* Left part of NAV */
 .logo {
   display: flex;
   flex-direction: column;
@@ -30,10 +24,18 @@ nav {
   font-family: 'bungee', sans-serif;
 }
 
+/* Right part of NAV */
+
 .rightNav {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+
+.writeTweet {
+  font-size: 10px;
+  text-align: center;
+  padding-left: 1em;
 }
 
 .clickWriteTweet {
@@ -44,6 +46,7 @@ nav {
   padding-left: 1em;
 }
 
+/* For most MOBILE */
 @media screen and (min-width: 330px) {
   .writeTweet {
     font-size: 16px;
@@ -51,9 +54,9 @@ nav {
   .clickWriteTweet {
     padding-left: 1.5em;
   }
-  
 }
 
+/* For TABLET */
 @media screen and (min-width: 768px) {
   .writeTweet {
     font-size: 18px;
@@ -61,13 +64,14 @@ nav {
   .clickWriteTweet {
     padding-left: 2em;
   }
-
 }
 
+/* For DESKTOP */
 @media screen and (min-width: 1024px) {
   nav {
     background-color: rgb(64, 86, 161);
     width: 100%;
+    margin-bottom: 2em;
   }
   .writeTweet {
     font-size: 20px;
@@ -75,5 +79,4 @@ nav {
   .clickWriteTweet {
     padding-left: 2.5em;
   }
-  
 }

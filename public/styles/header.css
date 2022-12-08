@@ -12,6 +12,7 @@ header {
   background-image: none;
 }
 
+/* For DESKTOP */
 @media screen and (min-width: 1024px) {
   header {
     height: 100%;
