@@ -20,6 +20,14 @@ $(() => { // makes sure whole page is loaded first
   
   const createTweetElement = function(tweet) {
     const postDate = timeago.format(tweet.created_at);
+
+    const escape = function(str) {
+      let div = document.createElement("div");
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    };
+
+    const safeHTML = `<div class="tweetContents">${escape(tweet.content.text)}</div>`;
     const $tweet = `<article class="aTweet">
         <header>
           <div class="tweeter">
@@ -35,9 +43,9 @@ $(() => { // makes sure whole page is loaded first
               ${tweet.user.handle}
             </div>
           </div>
-          <div class="tweetContents">
-            ${tweet.content.text}
-          </div>
+          
+            ${safeHTML}
+          
         </header>
         <footer>
           <div class="date">
@@ -72,10 +80,7 @@ $(() => { // makes sure whole page is loaded first
   $("form").submit(function( event ) {
     event.preventDefault();
     const serializedData = $("form").serialize()
-    // The user should be given an error that their tweet content is too long or that it is not present (ideally separate messages for each scenario)
     const tweetContent = $('#tweet-text').val().trim();
-    // The form should not be cleared
-    // The form should not submit
     console.log(tweetContent);
     if (!tweetContent) {
       alert("empty string!");
@@ -83,10 +88,10 @@ $(() => { // makes sure whole page is loaded first
       alert("too much!");
     } else {
       $.post('/tweets', serializedData);
+      loadTweets();
+      $("textarea").val("");
+      $("output").val("140");
     }
-    loadTweets();
-    //$('#tweet-text').val("");  // NOT WORKING
-
   });
 
 
