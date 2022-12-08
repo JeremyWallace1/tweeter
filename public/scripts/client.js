@@ -68,18 +68,25 @@ $(() => { // makes sure whole page is loaded first
     });
   };
 
-  $("form").submit(function( event ) {
-    // prevent the form from doing it's usual post and capture it instead.
-    event.preventDefault();
 
-    // Serialize the form data
+  $("form").submit(function( event ) {
+    event.preventDefault();
     const serializedData = $("form").serialize()
-    console.log(serializedData);
-    // Use the jQuery library to submit a POST request that sends the serialized data to the server
-    
-    $.post('/tweets', serializedData);
-    // alert( serializedData );
-  
+    // The user should be given an error that their tweet content is too long or that it is not present (ideally separate messages for each scenario)
+    const tweetContent = $('#tweet-text').val().trim();
+    // The form should not be cleared
+    // The form should not submit
+    console.log(tweetContent);
+    if (!tweetContent) {
+      alert("empty string!");
+    } else if (tweetContent.length > 140) {
+      alert("too much!");
+    } else {
+      $.post('/tweets', serializedData);
+    }
+    loadTweets();
+    //$('#tweet-text').val("");  // NOT WORKING
+
   });
 
 
