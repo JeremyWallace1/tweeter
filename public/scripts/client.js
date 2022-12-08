@@ -100,7 +100,8 @@ $(() => { // makes sure whole page is loaded first
 
   $("button.clickWriteTweet").on("click", () => {
     console.log("clicked the angles-down item");
-    $(".new-tweet").css("display", "flex");
+    // $(".new-tweet").css("display", "flex");
+    $(".new-tweet").slideDown();
     $("textarea").focus();
   });
 
