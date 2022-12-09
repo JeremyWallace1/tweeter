@@ -7,6 +7,7 @@ This repository was practice for HTML, CSS, JS, jQuery and AJAX front-end skills
 ## Final Product
 
 1. Small Phone:
+
 <img src="screenshots/tweeter1.png"
      alt="small phone example of tweeter page"
      style="float: left; margin-right: 10px;">
