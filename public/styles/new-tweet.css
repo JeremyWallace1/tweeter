@@ -15,7 +15,6 @@ form {
 }
 
 textarea {
-  height: 2em;
   border-bottom: 5px solid rgb(90, 87, 77);
   border-top: none;
   border-left: none;
@@ -25,6 +24,7 @@ textarea {
   outline: 0;
   color: black;
   font-size: 20px;
+  margin-top: 0.5em;
 }
 
 .error {
@@ -35,7 +35,8 @@ textarea {
   color: white;
   background-color: red;
   padding: 5px;
-  width: 90%;
+  width: 100%;
+  margin-bottom: 0.5em;
 }
 
 form div {
@@ -59,25 +60,4 @@ form button {
 
 .reddify {
   color: red;
-}
-
-@keyframes example {
-  0%   {top:0px;}
-  50%  {top:5px;}
-  100% {top:0px;}
-}
-
-.clickWriteTweet {
-  position: relative;
-  animation-name: example;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  background-color: transparent;
-  border: none;
-  width: 2em;
-  align-self:center;
-  font-size: 16px;
-}
-.clickWriteTweet:hover {
-  color: white;
 }

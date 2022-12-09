@@ -32,37 +32,63 @@ nav {
   justify-content: flex-end;
 }
 
-.writeTweet {
-  font-size: 10px;
-  text-align: center;
-  padding-left: 1em;
-}
-
 .clickWriteTweet {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  color: red;
+  color: white;
+  background-color: transparent;
+  border: transparent;
   padding-top: 0.2em;
   padding-left: 1em;
+  font-size: 10px;
 }
+
+@keyframes bounce {
+  0%   {top:0px;}
+  50%  {top:5px;}
+  100% {top:0px;}
+}
+
+span.down {
+  display: block;
+  align-self: center;
+}
+span.up {
+  display: none;
+  align-self: center;
+}
+
+.clickWriteTweet i{
+  position: relative;
+  animation-name: bounce;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  background-color: transparent;
+  border: none;
+  width: 2em;
+  align-self:center;
+  font-size: 20px;
+  color: red;
+}
+
+button.clickWriteTweet:hover i {
+  color: white;
+}
+
 
 /* For most MOBILE */
 @media screen and (min-width: 330px) {
-  .writeTweet {
-    font-size: 16px;
-  }
   .clickWriteTweet {
-    padding-left: 1.5em;
+    font-size: 15px;
   }
 }
 
+
 /* For TABLET */
 @media screen and (min-width: 768px) {
-  .writeTweet {
-    font-size: 18px;
-  }
   .clickWriteTweet {
-    padding-left: 2em;
+    font-size: 18px;
   }
 }
 
@@ -73,10 +99,7 @@ nav {
     width: 100%;
     margin-bottom: 2em;
   }
-  .writeTweet {
-    font-size: 20px;
-  }
   .clickWriteTweet {
-    padding-left: 2.5em;
+    font-size: 22px;
   }
 }

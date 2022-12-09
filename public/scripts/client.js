@@ -88,6 +88,7 @@ $(() => {
       $(".error").slideDown("display", "flex");
     } else {
       $.post('/tweets', serializedData);
+      $(".new-tweet").slideToggle("slow");
       loadTweets(clearForm);
     }
   });
@@ -95,9 +96,9 @@ $(() => {
   loadTweets(clearForm);
 
   $("button.clickWriteTweet").on("click", () => {
-    console.log("clicked the angles-down item");
-    // $(".new-tweet").css("display", "flex");
     $(".new-tweet").slideToggle();
+    $("span.down").toggle();
+    $("span.up").toggle();
     $("textarea").focus();
   });
 

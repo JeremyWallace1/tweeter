@@ -52,11 +52,14 @@
         tweeter
       </div>
       <div class="rightNav">
-        <div class="writeTweet">
-          <span><strong>Write</strong> a new tweet</span>
-        </div>
         <button type="button" class="clickWriteTweet">
-          <i class="fa-solid fa-angles-down"></i>
+          <span><strong>Write</strong> a new tweet</span>
+          <span class = "down">
+            <i class="fa-solid fa-angles-down"></i>
+          </span>
+          <span class = "up">
+            <i class="fa-solid fa-angles-up"></i>
+          </span>
         </button>
       </div>
     </nav>
@@ -75,7 +78,6 @@
     <main class="container">
       <!-- new tweet section -->
       <section class="new-tweet">
-        <!-- <h2>Compose Tweet</h2> -->
         <form action="/tweets" method="POST">
           <div class="error">
             <span><i class="fa-solid fa-triangle-exclamation"></i></span>
@@ -94,6 +96,9 @@
       <!-- Old tweets now dynamically generated here from client.js -->
 
       </section>
+      <button onclick="topFunction()" id="toTopButton" title="Go to top">
+        <i class="fa-solid fa-angles-up"></i>
+      </button>
     </main>
   </body>
 </html>
