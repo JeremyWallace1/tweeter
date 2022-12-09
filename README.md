@@ -6,19 +6,19 @@ This repository was practice for HTML, CSS, JS, jQuery and AJAX front-end skills
 
 ## Final Product
 
-<img src="/screenshots/tweeter1.png"
+<img src="tweeter1.png"
      alt="small phone example of tweeter page"
      style="float: left; margin-right: 10px;">
-<img src="/screenshots/tweeter2.png"
+<img src="tweeter2.png"
      alt="tablet example of tweeter page"
      style="float: left; margin-right: 10px;">
-<img src="/screenshots/tweeter3.png"
+<img src="tweeter3.png"
      alt="full-size screen example of tweeter page"
      style="float: left; margin-right: 10px;">
-<img src="/screenshots/tweeter4.png"
+<img src="tweeter4.png"
      alt="tweeter page with form open"
      style="float: left; margin-right: 10px;">
-<img src="/screenshots/tweeter5.png"
+<img src="tweeter5.png"
      alt="tweeter page scrolled with to top button showing"
      style="float: left; margin-right: 10px;">
 
