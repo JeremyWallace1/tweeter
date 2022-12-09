@@ -1,8 +1,6 @@
 /* CSS for Navigation bar */
 nav {
-  display: none;
-  /* position: fixed; */
-  top: 0;
+  position: fixed;
   width: 100%;
   display: flex;
   background-color: transparent;
@@ -13,6 +11,8 @@ nav {
   padding-left: 1em;
   padding-right: 1em;
   padding-bottom: 0.5em;
+  background-image: url("../images/asfalt-dark.png");
+  background-color: #b38330;
 }
 
 /* Left part of NAV */
@@ -96,7 +96,6 @@ button.clickWriteTweet:hover i {
 /* For DESKTOP */
 @media screen and (min-width: 1024px) {
   nav {
-    position: fixed;
     background-color: rgb(64, 86, 161);
     width: 100%;
     margin-bottom: 2em;

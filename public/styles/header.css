@@ -1,20 +1,22 @@
 header {
-  display: flex;
-  height: 100%;
+  /* display: flex; */
+  position: fixed;
+  top: 80px;
   width: 100%;
   color: #FFFFFF;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: center; */
   text-align: center;
   font-size: 20px;
-  background-color: none;
-  background-image: none;
+  background-image: url("../images/asfalt-dark.png");
+  background-color: #b38330;
 }
 
 /* For DESKTOP */
 @media screen and (min-width: 1024px) {
   header {
+    position: unset;
     height: 100%;
     width: 29%;
     padding: 50px;

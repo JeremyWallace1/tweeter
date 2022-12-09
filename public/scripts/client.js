@@ -103,6 +103,7 @@ $(() => {
     $("span.down").toggle();
     $("span.up").toggle();
     $("textarea").focus();
+    $(window).scrollTop(0);
   });
 
 });
