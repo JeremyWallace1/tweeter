@@ -6,7 +6,6 @@
   color: rgb(90, 87, 77);
 }
 
-
 form {
   display: flex;
   flex-direction: column;
@@ -20,7 +19,7 @@ textarea {
   border-left: none;
   border-right: none;
   resize: none;
-  background-color:#f4f1ec;
+  background-color: #f4f1ec;
   outline: 0;
   color: black;
   font-size: 20px;
@@ -42,19 +41,19 @@ textarea {
 form div {
   display: flex;
   justify-content: space-between;
-  padding-top: 0.5em
+  padding-top: 0.5em;
 }
 
 form button {
   background-color: rgb(64, 86, 161);
   color: #FFFFFF;
-  font-family: 'bungee', sans-serif;
+  font-family: "bungee", sans-serif;
   border: none;
   padding: 3px 10px 3px 10px;
 }
 
 .counter {
-  font-family: 'bungee', sans-serif;
+  font-family: "bungee", sans-serif;
   padding: 3px 10px 3px 10px;
 }
 

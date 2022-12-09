@@ -90,6 +90,9 @@ $(() => {
       $.post('/tweets', serializedData);
       $(".new-tweet").slideToggle("slow");
       loadTweets(clearForm);
+      $("span.down").toggle();
+      $("span.up").toggle();
+  
     }
   });
 

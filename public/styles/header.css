@@ -2,7 +2,6 @@ header {
   display: flex;
   height: 100%;
   width: 100%;
-  padding-top: 100px;
   color: #FFFFFF;
   flex-direction: column;
   justify-content: center;
@@ -19,8 +18,8 @@ header {
     height: 100%;
     width: 29%;
     padding: 50px;
-    margin: 20px 0 0 40px;
-    background-image: url('../images/asfalt-dark.png');
+    margin: 120px 0 0 40px;
+    background-image: url("../images/asfalt-dark.png");
     background-color: #b38330;
     justify-content: flex-start;
     text-align: center;

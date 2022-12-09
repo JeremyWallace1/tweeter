@@ -1,6 +1,6 @@
 .old-tweets {
- display: flex;
- flex-direction: column-reverse;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .aTweet {
@@ -11,11 +11,10 @@
   margin-bottom: 1em;
   justify-content: space-between;
   overflow-wrap: anywhere;
-
 }
 
 .aTweet:hover {
-  box-shadow: 10px 10px rgb(90, 87, 77, 0.25);
+  box-shadow: 10px 10px rgba(90, 87, 77, 0.25);
 }
 
 /* HEADER for article.tweet */
@@ -28,7 +27,6 @@
   flex-basis: 100px;
   color: black;
   color: rgb(90, 87, 77);
-
 }
 
 .tweeter {
@@ -38,7 +36,6 @@
   flex-wrap: wrap;
   width: 98%;
   padding-top: 1em;
-  
 }
 
 .tweeterImageName {
@@ -54,7 +51,7 @@ picture {
 .tweeterHandle {
   align-self: flex-start;
   padding-left: 1em;
-  color: rgb(64, 86, 161, 0.33);
+  color: rgba(64, 86, 161, 0.33);
 }
 
 .tweetContents {
@@ -63,7 +60,6 @@ picture {
   padding: 0 1em;
   justify-content: flex-start;
   font-weight: 600;
-
 }
 
 /* FOOTER for article.tweet */
@@ -74,7 +70,6 @@ picture {
   margin: 0.5em;
   padding-top: 0.5em;
   border-top: 5px solid rgb(90, 87, 77);
-
 }
 
 .date {
@@ -95,9 +90,11 @@ picture {
 .flag:hover {
   color: darkgoldenrod;
 }
+
 .retweet:hover {
   color: darkgoldenrod;
 }
+
 .like:hover {
   color: darkgoldenrod;
 }

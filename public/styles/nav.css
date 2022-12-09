@@ -21,11 +21,10 @@ nav {
   flex-direction: column;
   justify-content: flex-end;
   font-size: 36px;
-  font-family: 'bungee', sans-serif;
+  font-family: "bungee", sans-serif;
 }
 
 /* Right part of NAV */
-
 .rightNav {
   display: flex;
   flex-direction: column;
@@ -45,21 +44,27 @@ nav {
 }
 
 @keyframes bounce {
-  0%   {top:0px;}
-  50%  {top:5px;}
-  100% {top:0px;}
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: 5px;
+  }
+  100% {
+    top: 0px;
+  }
 }
-
 span.down {
   display: block;
   align-self: center;
 }
+
 span.up {
   display: none;
   align-self: center;
 }
 
-.clickWriteTweet i{
+.clickWriteTweet i {
   position: relative;
   animation-name: bounce;
   animation-duration: 2s;
@@ -67,7 +72,7 @@ span.up {
   background-color: transparent;
   border: none;
   width: 2em;
-  align-self:center;
+  align-self: center;
   font-size: 20px;
   color: red;
 }
@@ -76,25 +81,22 @@ button.clickWriteTweet:hover i {
   color: white;
 }
 
-
 /* For most MOBILE */
 @media screen and (min-width: 330px) {
   .clickWriteTweet {
     font-size: 15px;
   }
 }
-
-
 /* For TABLET */
 @media screen and (min-width: 768px) {
   .clickWriteTweet {
     font-size: 18px;
   }
 }
-
 /* For DESKTOP */
 @media screen and (min-width: 1024px) {
   nav {
+    position: fixed;
     background-color: rgb(64, 86, 161);
     width: 100%;
     margin-bottom: 2em;

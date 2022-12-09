@@ -6,6 +6,7 @@
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -13,44 +14,42 @@ html {
 /*
  * Global layout stuff
  */
-
 body {
   color: #545149;
-  font-family: 'source-sans-pro', sans-serif; 
+  font-family: "source-sans-pro", sans-serif;
   font-size: 24px;
-  background-image: url('../images/asfalt-dark.png');
+  background-image: url("../images/asfalt-dark.png");
   background-color: #b38330;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-
 main {
   background-color: #f4f1ec;
   display: flex;
   flex-direction: column;
   padding-left: 5%;
   padding-right: 2%;
-  padding-top: 1.5em;
-
+  padding-top: 0;
 }
 
 /* for Stretch Activity: second toggle button */
 #toTopButton {
-  display:block; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: red; /* Set a background color */
-  color: white; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
+  display: none;
+  position: fixed;
+  height: 100px;
+  width: 100px;
+  bottom: 20px;
+  right: 20px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  /* padding: 30px; */
+  border-radius: 50%;
+  font-size: 30px; /* Increase font size */
 }
 
 #toTopButton:hover {
@@ -69,6 +68,6 @@ main {
   }
   main {
     width: 66.6%;
-    padding-top: 0;
+    padding-top: 100px;
   }
 }
