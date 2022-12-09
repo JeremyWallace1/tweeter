@@ -3,25 +3,15 @@
  */
 
 $(() => {
-  const refreshTweets = (data) => {
-    $('.old-tweets').empty();
-    renderTweets(data);
-  };
-  
-  const renderTweets = function(tweets) {
-    for (let twit of tweets) {
-      $tweet = createTweetElement(twit);
-      $('.old-tweets').append($tweet);
-    }
-  };
-
   const escape = function(str) {
+    // uses a fake div to change the text into text made safe from cross-scripting
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
 
   const createTweetElement = function(tweet) {
+    // formats the tweet from the database into html with date reformatted and text made safe from cross-scripting
     const postDate = timeago.format(tweet.created_at);
     const safeHTML = `<p class="tweetContents">${escape(tweet.content.text)}</p>`;
     const $tweet = `<article class="aTweet">
@@ -62,21 +52,36 @@ $(() => {
     return $tweet;
   };
 
-  const loadTweets = function(callback) {
-    //responsible for fetching tweets from the http://localhost:8080/tweets page
-    $.get('/tweets', function(response) {
-      refreshTweets(response);
-      callback();
-    });
-  };
-
   const clearForm = function() {
+    // clears the contents of the form before rehiding it
     $("textarea").val("");
     $("output").val("140");
     $(".error").css("display", "none");
+    return;
+  };
+
+  const loadTweets = function() {
+    $.get('tweets')
+      .then((tweets) => {
+        renderTweets(tweets);
+      })
+      .then(() => {
+        clearForm();
+      });
+    return;
+  };
+
+  const renderTweets = function(tweetArray) {
+    $('.old-tweets').empty();
+    for (const tweet of tweetArray) {
+      const $tweetArticle = createTweetElement(tweet);
+      $('.old-tweets').append($tweetArticle);
+    }
+    return;
   };
 
   $("form").submit(function(event) {
+    // form submission, prevents default behaviour and captures iet to get the data in the right format before adding it to the database, also checks for 0 text and too much text
     event.preventDefault();
     const serializedData = $("form").serialize();
     const tweetContent = $('#tweet-text').val().trim();
@@ -85,20 +90,22 @@ $(() => {
       $(".error").slideDown();
     } else if (tweetContent.length > 140) {
       $(".error-message").text(`You are using too many characters! Keep it under 140, k?`);
-      $(".error").slideDown("display", "flex");
+      $(".error").slideDown();
     } else {
       $.post('/tweets', serializedData);
+      // tucks the form back up to hidden
       $(".new-tweet").slideToggle("slow");
-      loadTweets(clearForm);
+      loadTweets();
+      // toggles the arrows up or down depending on if the form is shown or not
       $("span.down").toggle();
       $("span.up").toggle();
-  
     }
   });
 
-  loadTweets(clearForm);
+  loadTweets();
 
   $("button.clickWriteTweet").on("click", () => {
+    // when the arrows are clicked it opens the form and gives it focus or hides it if already open and brings the page up to the top as well (so the form can be seen)
     $(".new-tweet").slideToggle();
     $("span.down").toggle();
     $("span.up").toggle();
