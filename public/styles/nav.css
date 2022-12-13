@@ -97,8 +97,8 @@ button.clickWriteTweet:hover i {
 @media screen and (min-width: 1024px) {
   nav {
     background-color: rgb(64, 86, 161);
-    width: 100%;
     margin-bottom: 2em;
+    max-width: 1280px;
   }
   .clickWriteTweet {
     font-size: 22px;

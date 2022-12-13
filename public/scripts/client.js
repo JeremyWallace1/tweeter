@@ -57,7 +57,6 @@ $(() => {
     $("textarea").val("");
     $("output").val("140");
     $(".error").css("display", "none");
-    return;
   };
 
   const loadTweets = function() {
@@ -68,7 +67,6 @@ $(() => {
       .then(() => {
         clearForm();
       });
-    return;
   };
 
   const renderTweets = function(tweetArray) {
@@ -77,7 +75,6 @@ $(() => {
       const $tweetArticle = createTweetElement(tweet);
       $('.old-tweets').append($tweetArticle);
     }
-    return;
   };
 
   $("form").submit(function(event) {
