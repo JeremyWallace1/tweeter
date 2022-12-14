@@ -77,6 +77,9 @@ $(() => {
     }
   };
 
+
+
+
   $("form").submit(function(event) {
     // form submission, prevents default behaviour and captures iet to get the data in the right format before adding it to the database, also checks for 0 text and too much text
     event.preventDefault();
@@ -89,13 +92,17 @@ $(() => {
       $(".error-message").text(`You are using too many characters! Keep it under 140, k?`);
       $(".error").slideDown();
     } else {
-      $.post('/tweets', serializedData);
-      // tucks the form back up to hidden
-      $(".new-tweet").slideToggle("slow");
-      loadTweets();
-      // toggles the arrows up or down depending on if the form is shown or not
-      $("span.down").toggle();
-      $("span.up").toggle();
+      $.post('/tweets', serializedData).then(() => {
+        // tucks the form back up to hidden
+        $(".new-tweet").slideToggle("slow");
+        loadTweets();
+        // toggles the arrows up or down depending on if the form is shown or not
+        $("span.down").toggle();
+        $("span.up").toggle();
+      })
+      .catch((error) => {
+        console.log('error:', error);
+      });
     }
   });
 
